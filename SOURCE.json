@@ -1,0 +1,40 @@
+{
+  "company": "MC Кейк",
+  "category": "Кондитерская / торты на заказ",
+  "address": "Москва, улица Перерва, 38",
+  "phone": "+79260826445",
+  "verified_on": "2026-11-04",
+  "sources": [
+    "https://totadres.ru/moskva/org/mc_keyk/3243538",
+    "https://urbanplaces.su/ru_moskva/moskva/card-70000001091824693-mc-keik"
+  ],
+  "verification": "Parent verified company name, address, phone and cakes-to-order category in public directory. Business hours conflict across directories and are omitted.",
+  "concept_boundary": "Unofficial design concept. Illustrative cake styling is not a portfolio/catalogue or promised availability. No real prices, testimonials, delivery terms or production guarantees.",
+  "motion": "Procedural SVG/CSS/GSAP. No video or bitmap frames. Static generated illustration only in first idea card.",
+  "form": "Browser-only validation/success/reset demo. No data sent or stored; real contact via public business telephone.",
+  "image": {
+    "file": "assets/hero-cake.webp",
+    "tool": "Built-in image_gen",
+    "generated_on": "2026-11-04",
+    "usage": "Stationary gallery concept illustration, not company portfolio",
+    "prompt": "Use case: ads-marketing. Isolated premium patisserie product cutout, transparent background. Tall ivory buttercream cake, sculptural piped scallops, burgundy cherries, cobalt blue satin ribbon bow and cobalt plate. Luxury playful editorial food photography, full cake visible, no text/logo/hands/utensils.",
+    "optimization": "Same generated illustration encoded as WebP at quality 92; dimensions and alpha retained."
+  },
+  "fonts": {
+    "families": [
+      "Cormorant Garamond",
+      "Manrope"
+    ],
+    "source": "Google Fonts, copied from existing project local assets",
+    "license": "SIL Open Font License; included in assets/fonts"
+  },
+  "dependencies": {
+    "GSAP": "Existing locally vendored GSAP from za-kofe-coffee-design-demo",
+    "ScrollTrigger": "Existing locally vendored ScrollTrigger from za-kofe-coffee-design-demo"
+  },
+  "design_references": [
+    "https://styles.refero.design/style/cdc4a162-cefa-49a1-81e7-4857e421ae24",
+    "https://21st.dev/@ruixen.ui/components/animated-feature-spotlight3d",
+    "https://motionsites.ai/lesson/build-scroll-animated-website-with-ai"
+  ]
+}
