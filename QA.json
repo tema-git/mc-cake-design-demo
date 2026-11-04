@@ -1,5 +1,5 @@
 {
-  "parent_browser_audit": {
+  "previous_parent_browser_audit": {
     "date": "2026-11-04",
     "status": "passed",
     "viewports": [
@@ -18,5 +18,48 @@
       "No physical iOS/Android device test",
       "No-JS submission guard reviewed in source"
     ]
+  },
+  "parent_browser_audit": {
+    "date": "2026-11-04",
+    "status": "passed",
+    "revision": "current post-audit revision",
+    "viewports": [
+      320,
+      390,
+      768,
+      1280,
+      1920
+    ],
+    "verified": [
+      "Desktop browser interaction plus responsive widths 320, 390, 768, 1280, 1920; no root horizontal overflow in scanned layouts",
+      "Game/configurator completion, invalid and valid demo-form paths, success and repeat/reset",
+      "Sticky visible Contacts, accent actions, SVG arrows, transparent text selection",
+      "Custom listbox keyboard navigation and cancel/commit behavior",
+      "No manual motion controls, native select elements, raster/video scene elements or visible device-input instructions",
+      "Exact footer credit: Сайт создан Spoki Studio",
+      "Local assets/anchors/unique IDs and JavaScript syntax passed; browser console had no site warnings/errors",
+      "Warm cherry/cream/rose palette and three procedural SVG gallery cakes visually verified",
+      "Details, Color and Shape can be visited in any order; rapid switches preserve independent choices",
+      "Concept result can be edited and regenerated; reset works",
+      "Dropdown End/Enter, Home/Escape, click selection, validation and reset verified",
+      "Mobile constructor, keyboard tab navigation and upward popup placement verified",
+      "Contact face moves -5/-2.7 to +5/+2.9px; outer anchor is unchanged",
+      "Hero text and cake do not overlap; removed FAQ and obsolete hero scroll link"
+    ],
+    "limits": [
+      "Viewport emulation only; no physical iOS or Android device test",
+      "Reduced-motion coverage uses an unpublished local fixture simulating matchMedia and the CSS media query; OS preference was not changed",
+      "No-JavaScript submission guard reviewed in source rather than browser-disabled-JavaScript execution",
+      "No real order/callback backend: forms intentionally demonstrate validation without sending or storing personal data",
+      "Direct public Pages HTTP access timed out from this environment; publication is verified separately through GitHub build status and deployed revision"
+    ]
+  },
+  "browser_qa": "Current revision exercised in local in-app browser; see parent_browser_audit for coverage and limits.",
+  "final_static_audit": {
+    "slug": "mc-cake-design-demo",
+    "issues": [],
+    "ids": 56,
+    "references": 48,
+    "images": 0
   }
 }

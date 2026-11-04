@@ -1,37 +1,28 @@
 # MC Кейк — static design concept
 
-Buildless responsive HTML/CSS/JS. Open via any static HTTP server; all assets and links are relative for GitHub Pages subdirectories.
-
-```sh
-python3 -m http.server 8080
-```
-
-Entry: `index.html`. No installation or build required. `app.js` uses locally hosted GSAP and ScrollTrigger. The entire hero, exploded cake and constructor are SVG/CSS/JS motion. One stationary generated photo illustrates a possible design. No videos or animated raster sequences.
+Buildless HTML/CSS/JavaScript, local fonts and local GSAP/ScrollTrigger. Open `index.html` through a static HTTP server. All asset URLs are relative for GitHub Pages project hosting. All cake scenes are procedural SVG; no raster or video assets remain.
 
 ## Future copies
-- `index.html`: replace document title/description, header/footer brand, address, `tel:` link text and number, map URL, contact name, concept disclosures and FAQ references. Search for `MC Кейк`, `Перерва`, `79260826445`, `926 082`.
-- `SOURCE.json`: replace verified company identity, sources and factual boundary.
-- `style.css`: brand tokens in `:root`, then individual composition if the next company needs a different tone.
-- `app.js`: editable names/colors map and cake geometry near the top; constructor presets remain independent from contact data.
-- `assets/favicon.svg`: adapt brand emblem. Do not remove font/vendor license notices.
+- `index.html`: title/description, header/footer brand, address, phone text and `tel:` destinations, map URL and contact copy. Search `MC Кейк`, `Перерва`, `79260826445`, `926 082`.
+- `SOURCE.json`: company identity, sources and factual boundary. Preserve accurate source notes.
+- `style.css`: palette tokens and responsive composition. Maintain readable typography, transparent selection, stable controls and the sticky header.
+- `app.js`: `names`, `colors` and `cakeSVG()`; constructor presets are separate from company contact facts.
+- `assets/favicon.svg` and `assets/cake-cursor.svg`: optional brand identity changes. Keep font/vendor licenses.
+- Footer credit is plain text “Spoki Studio” with no invented link.
 
-Keep visible demo notices unless a real backend is separately implemented and tested. Never change the success copy to claim real submission while the browser-only handler remains.
+Keep the honest demo form disclosure unless a real backend is separately implemented and tested. Do not claim a successful real order while the browser-only handler remains. No fetch, analytics, localStorage or sessionStorage is used.
 
-## Functional QA selectors
-- Constructor: `#create`; `button[data-group=color][data-value=blue]`, then `#builder-next`; `button[data-group=shape][data-value=tiered]`, next; `button[data-group=decor][data-value=candles]`, next. Expect `#builder-result` visible and SVG shape updated. `#builder-back` returns a step. `#builder-reset` restores first step. `#use-concept` puts the current recipe in `#cake-wish` then scrolls to contacts.
-- Preset: `.idea-select[data-preset=rose]` selects pink mini cake with bow and opens the constructor section.
-- Form: `#customer-name`, `#customer-phone`, `#demo-consent`, `.form-submit`. Empty/invalid must display inline errors. With letters in name, 10–15 phone digits and checked demo acknowledgement, form resets and `#form-success` appears. `#form-reset` makes it usable again.
-- Native FAQ: `.faq-list summary`.
-- Mobile: `.header-contact` always available; no horizontal scroll at 360/390 px. Header-aware anchors. Reduced motion static scenes and fully usable constructor/form.
+## QA selectors
+- Builder tabs: `#builder-tab-0`, `#builder-tab-1`, `#builder-tab-2`. Direct switching in any order; Left/Right/Home/End use automatic activation. Tab enters the active panel’s options.
+- Options: `[data-group=color][data-value=burgundy]`, `[data-group=shape][data-value=tiered]`, `[data-group=decor][data-value=candles]`. All 27 combinations are valid.
+- `#builder-next` creates the concept at any time. `#builder-result` remains visible and updates when choices change. `#builder-reset` resets; `#use-concept` fills `#cake-wish`.
+- `.idea-select[data-preset=cream|burgundy|rose]` selects the matching code-drawn cake.
+- Combobox: `#occasion-combobox`, `#occasion-listbox`, `#occasion-option-0` through `#occasion-option-4`. Arrow/Home/End/typeahead navigate; Enter/Space/Tab commit; Escape/outside cancel. Focus stays on trigger while open, normal Tab navigation is preserved.
+- Form: `#customer-name`, `#customer-phone`, `#occasion`, `#demo-consent`, `.form-submit`. Empty/invalid submission gives inline errors. Valid submission resets input and reveals `#form-success`. `#form-reset` restarts with birthday occasion restored.
+- Header magnet: `.header-contact` stays stationary; `.contact-face` moves no more than 5 px on fine pointers. It resets on exit/focus and is disabled for system reduced motion/coarse pointers.
+- Cursor: only `.hero-code-cake > svg`, `.cake-illustration > svg`, `.cake-preview > svg` receive the cherry cursor.
+- Reduced motion: complete static artwork, fully usable constructor/form/dropdown and no smooth scroll. No manual toggle exists.
+- Mobile: 320/390 px, no horizontal overflow, Contacts always visible, dropdown within available viewport space, readable 16 px controls.
 
-## Validation
-- JavaScript syntax checked with Node.
-- Static HTML: local assets, anchor destinations and ID uniqueness checked.
-- Interactive browser QA is conducted by the parent task before publication.
-
-## Motion and audit controls
-The footer button «Анимация: вкл.» / «Анимация: выкл.» controls pointer, scroll and interaction animations through one in-memory state. No preference is persisted. System `prefers-reduced-motion` takes precedence and is explained next to the disabled toggle. All features remain usable without movement. Returning with browser Back/Forward restores motion listeners safely.
-
-The default form submit button starts disabled in HTML and becomes active only after JavaScript installs its local `preventDefault` handler, preventing a no-JavaScript GET submission of personal data. The `noscript` message directs visitors to the real phone link.
-
-`AUDIT.json` records the independent source audit. Browser verification belongs to the parent task. The static gallery illustration is locally encoded WebP, 330 KB, with retained alpha and original 1145 × 1374 dimensions; it is never animated.
+## Checks
+`AUDIT.json` records the current independent source audit. JavaScript syntax, local assets, anchor and ARIA references, ID uniqueness, removed raster usage and no-JavaScript form guard were checked locally. Current browser/visual QA is complete. See QA.json for executed scenarios, viewport coverage and environment limitations.

@@ -1,26 +1,44 @@
 {
   "date": "2026-11-04",
-  "scope": "MC Кейк source audit; actual visual/browser testing done by parent",
+  "scope": "MC Кейк source audit and direct revision; parent owns visual/browser QA",
   "static_checks": {
-    "references": 43,
-    "unique_ids": 44,
-    "form_controls_with_names": 5,
+    "node_syntax": "pass",
+    "unique_ids": 56,
+    "local_HTML_references": 8,
+    "anchor_and_ARIA_references": 56,
     "missing_refs": [],
-    "node_syntax": "pass"
+    "CSS_brace_balance": "pass",
+    "native_select_count": 0,
+    "raster_element_count": 0,
+    "form_no_JS_guard": "disabled until preventDefault handler installed",
+    "network_or_storage_form_implementation": "none"
   },
-  "fixes": [
-    "Unified in-memory motion controller and accessible footer toggle; system reduced motion wins",
-    "Motion off reverts scroll contexts, clears interaction tweens and pointer listeners; restores on BFCache",
-    "Native scrolling stays usable; disabled smooth scroll uses !important override against ScrollTrigger inline style",
-    "Rapid cake changes kill tweens on detached SVG nodes",
-    "Phone validation rejects letters and invalid characters",
-    "No-JS form submission guarded by disabled default button and noscript instruction",
-    "Per-control scroll margin prevents sticky header covering focus",
-    "Inactive steps contrast 3.25 to 5.25:1; placeholder colour darkened above 5:1",
-    "Static gallery image encoded to 330040-byte WebP (from2006940), correct dimensions1145x1374",
-    "Critical Cyrillic fonts preloaded",
-    "GSAP cleanup guards empty/null target arrays to avoid console warnings when motion is disabled",
-    "Phone allows a single leading plus only; six accepted/rejected input cases passed"
+  "contrast_ratios": {
+    "wine_on_cream": 10.52,
+    "cream_on_cherry_action": 6.49,
+    "muted_on_cream": 5.75,
+    "secondary_on_wine": 7.78,
+    "butter_on_wine": 8.59
+  },
+  "changes": [
+    "Entire cobalt palette replaced with deep cherry, cream and dusty rose, including plates, bows, SVG gradients, named constructor choice and favicon",
+    "All three gallery cakes are procedural SVG; unused WebP removed",
+    "Contacts anchor hitbox fixed; inner face magnet bounded to 5px, disabled for coarse pointers/reduced motion",
+    "Local SVG cherry cursor confined to non-text cake art; ordinary cursor on text, links and fields",
+    "System reduced motion is the only motion setting; removed manual toggle and visible technical hints",
+    "Constructor is directly selectable accessible tabs with any-order choices and editable result",
+    "Select-only combobox supports provisional arrows/Home/End/typeahead, commit Enter/Space/Tab, Escape cancellation, outside close and responsive placement",
+    "Dropdown scroll updates placement instead of dismissing during focus autoscroll",
+    "No false submission: field validation, success/reset, no-JS guard and visible demo disclosure retained",
+    "FAQ removed; layer story preserved; no cake text overlays; ribbon duplicates six phrases seamlessly",
+    "Footer has plain Spoki Studio text without an invented link"
   ],
-  "browser_checks": "Parent task owns browser validation; not executed by this agent"
+  "regression_guards": [
+    "Empty GSAP cleanup target arrays checked before use",
+    "Rapid SVG replacement kills detached-node tweens",
+    "Scroll and pointer animation targets separated in gallery",
+    "Single optional leading plus in phone validation, 10–15 digits",
+    "Transparent selection and sticky-header-aware focus offsets retained"
+  ],
+  "browser_checks": "Completed by parent; detailed executed scenarios and limits are in QA.json."
 }
